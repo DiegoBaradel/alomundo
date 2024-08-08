@@ -6,18 +6,20 @@ import Menu from "./componentes/Menu";
 import RodaPe from "./componentes/RodaPe";
 import PaginaPadrao from "./componentes/PaginaPadrao";
 import Post from "./componentes/Post";
+import ScrollToTop from "./componentes/ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       < BrowserRouter>
+      <ScrollToTop />
         <Menu />
         <Routes>
           <Route path="/" element={<PaginaPadrao />}>
             <Route index element={<Home/>} />
             <Route path="SobreMim" element={<SobreMim />} />
           </Route>
-          <Route path="/Post/:id/*" element={<Post/>}/>
+          <Route path="Posts/:id/" element={<Post/>}/>
           <Route path="/*" element={<Erro404 />} />
         </Routes>
       </BrowserRouter>

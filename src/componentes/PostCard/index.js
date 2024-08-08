@@ -10,7 +10,7 @@ const PostCard = ({post}) =>{
                 src={`/assets/posts/${post.id}/capa.png`} 
                 alt='Imagem de capa'/>
             <h2 className={styles.titulo}>{post.titulo}</h2>
-            <Link to={`Post/${post.id}`}>
+            <Link to={`/Posts/${post.id}`}>
                 <BotaoPrincipal>
                     Ler
                 </BotaoPrincipal>
